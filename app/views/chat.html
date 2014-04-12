@@ -14,6 +14,7 @@
               <img class="media-object chat-profile" src="{{message.userImageURL}}">
             </a>
             <div class="media-body">
+              <i ng-click="removeMessage(message)">X</i>
               <h4 class="media-heading">{{message.user}}</h4>
               <span ng-bind-html="message.message | linky"></span>
             </div>

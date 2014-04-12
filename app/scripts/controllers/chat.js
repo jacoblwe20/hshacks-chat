@@ -17,4 +17,9 @@ angular.module('hshacksChatApp')
 
       $scope.message = '';
     };
+
+    $scope.removeMessage = function ( message ) {
+      $scope.messages.$remove( message.$id );
+    };
+
   });
