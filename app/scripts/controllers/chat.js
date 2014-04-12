@@ -3,16 +3,16 @@
 angular.module('hshacksChatApp')
   .controller('ChatCtrl', function ($scope, Chat) {
     $scope.user = {
-      name: 'Guest',
-      profilePicture: 'http://i.imgur.com/Vn018nS.jpg'
+      user: 'Lil\' Jon',
+      userImageURL: 'http://www.xxlmag.com/wp-content/uploads/2010/02/lil-jon-news.gif'
     };
     $scope.messages = Chat;
 
     $scope.addMessage = function () {
       $scope.messages.$add({
-        user: $scope.user.name,
+        user: $scope.user.user,
         message: $scope.message,
-        image: $scope.user.profilePicture
+        userImageURL: $scope.user.userImageURL
       });
 
       $scope.message = '';

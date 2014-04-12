@@ -1,5 +1,7 @@
 <div class="header">
   <img src="/images/hshacks_logo.png" class="logo">
+  <input ng-model="user.user"/>
+  <input ng-model="user.userImageURL"/>
 </div>
 
 <div class="panel panel-default">
@@ -9,7 +11,7 @@
         <ul class="media-list">
           <li class="media" ng-repeat="message in messages | orderByPriority">
             <a class="pull-left">
-              <img class="media-object chat-profile" src="{{message.image}}">
+              <img class="media-object chat-profile" src="{{message.userImageURL}}">
             </a>
             <div class="media-body">
               <h4 class="media-heading">{{message.user}}</h4>
